@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="../node_modules/@glidejs/glide/dist/css/glide.core.min.css" />
+    <link
+      rel="stylesheet"
+      href="../node_modules/@glidejs/glide/dist/css/glide.theme.min.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="output.css" />
+    <title>Avanti</title>
+  </head>
+  <body class=" nunito-sans">
+    <header class="sticky top-0 mb-2 bg-white z-10 md:w-full left-50%">
+      <p class="text-white bg-blue-700 text-center p-2 text-sm">
+        Ganhe <strong class="bg-indigo-700 font-normal p-1">R$10,00</strong> de
+        desconto no seu primeiro pedido. Utilize o cupom DESCONTO10
+      </p>
+      <nav class="flex justify-between items-center bg-white md:px-80 w-full mx-auto p-3">
+        <img class="md:hidden" src="../image/menu-icon.svg" alt="menu" />
+        <img src="../image/logo-mobile.svg" alt="Logo Avanti" />
+        <div class="w-[500px] sm:hidden md:block search p-3 relative ">
+          <img
+            src="../image/search icon.svg"
+            alt="search-icon"
+            class="absolute right-5 mr-2 mt-3" />
+          <input
+            type="text"
+            placeholder="Digite aqui o que você procura?"
+            class="w-full h-10 rounded-md border-2 border-gray-300 focus:outline-none focus:border-blue-500 pl-3" />
+        </div>
+        <div class="sm:hidden md:flex  justify-center items-center gap-5 ">
+          <img src="../image/profile-icon.svg" alt="profile icon" />
+          <p class="text-[14px]">Olá, <br> Nome Cliente</p>
+        </div>
+        <div class="cart relative">
+          <p
+            class="bg-blue-700 rounded-full text-center text-white absolute -top-2.5 -right-2 text-sm w-5">
+            2
+          </p>
+          <img src="../image/cart-icon.svg" alt="cart-icon" />
+        </div>
+        
+      </nav>
+      <div class="hidden md:block md:w-full left-50%">
+        <ul class="flex justify-center items-center gap-5">
+          <li class=" ">
+            <a class="flex justify-center items-center gap-2 font-bold hover:text-blue-700 p-2" href=""><img class="hover:fill-blue-700" src="../image/menu-desktop.svg" alt="menu icon">Todos os Departamentos</a>
+            <div class="absolute bg-white w-fit rounded-md shadow-lg mt-2  z-10  left-50%">
+              <a class="block hover:text-blue-700 hover:font-bold" href="">Departamento</a>
+              <a class="block hover:text-blue-700 hover:font-bold" href="">Departamento</a>
+              <a class="block hover:text-blue-700 hover:font-bold" href="">Departamento</a>
+              <a class="block hover:text-blue-700 hover:font-bold" href="">Departamento</a>
+              <a class="block hover:text-blue-700 hover:font-bold" href="">Departamento</a>
+              <a class="block hover:text-blue-700 hover:font-bold" href="">Departamento</a>
+              <a class="block hover:text-blue-700 hover:font-bold" href="">Departamento</a>
+              <a class="block hover:text-blue-700 hover:font-bold" href="">Departamento</a>
+              <a class="block hover:text-blue-700 hover:font-bold" href="">Departamento</a>
+            </div>
+          </li>
+          <li class="flex text-[14px] hover:text-blue-700 hover:font-bold p-2">Departamento</li>
+          <li class="flex text-[14px] hover:text-blue-700 hover:font-bold p-2">Departamento</li>
+          <li class="flex text-[14px] hover:text-blue-700 hover:font-bold p-2">Departamento</li>
+          <li class="flex text-[14px] hover:text-blue-700 hover:font-bold p-2">Departamento</li>
+          <li class="flex text-[14px] hover:text-blue-700 hover:font-bold p-2">Departamento</li>
+          <li class="flex text-[14px] hover:text-blue-700 hover:font-bold p-2">Departamento</li>
+        </ul>
+      </div>
+      <div class="md:hidden search p-3">
+        <img
+          src="../image/search icon.svg"
+          alt="search-icon"
+          class="absolute right-5 mr-2 mt-3" />
+        <input
+          type="text"
+          placeholder="Digite aqui o que você procura?"
+          class="w-full h-10 rounded-md border-2 border-gray-300 focus:outline-none focus:border-blue-500 pl-3" />
+      </div>
+    </header>
+    <main
+      class=" md:w-3xl md:mx-auto sm:w-2xl sm:mx-auto w-full mx-auto bg-white ">
+      <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide">
+              <img class="w-full max-h-max md:hidden" src="../image/banner.png" alt="banner art" />
+              <img class="sm:hidden min-h-96 md:block max-w-96 max-h-max" src="../image//banner-desktop.png" alt="banner art">
+            </li>
+            <li class="glide__slide">
+              <img class="w-full max-h-max md:hidden" src="../image/banner.png" alt="banner art" />
+              <img class="sm:hidden min-h-96 md:block max-w-96 max-h-max" src="../image//banner-desktop.png" alt="banner art">
+            </li>
+            <li class="glide__slide">
+              <img class="w-full max-h-max md:hidden" src="../image/banner.png" alt="banner art" />
+              <img class="sm:hidden min-h-96 md:block max-w-96 max-h-max" src="../image//banner-desktop.png" alt="banner art">
+            </li>
+          </ul>
+        </div>
+        <div class="glide__bullets" data-glide-el="controls[nav]">
+          <button class="glide__bullet" data-glide-dir="=0"></button>
+          <button class="glide__bullet" data-glide-dir="=1"></button>
+          <button class="glide__bullet" data-glide-dir="=2"></button>
+        </div>
+      </div>
+      <div class="produtos mt-5 p-3 md:w-full">
+        <div class="flex justify-between items-center">
+          <h2 class="text-md font-bold">Lançamentos</h2>
+          <a href="#" class="font-medium underline decoration-solid"
+            >Ver mais</a
+          >
+        </div>
+        <div class="mt-3">
+          <div class="glide2 relative">
+            <div class="glide__track" data-glide-el="track">
+              <ul class="glide__slides">
+                <li class="glide__slide">
+                  <div
+                    class="card  bg-white rounded-lg border-1 border-gray-300 shadow-md p-4 relative">
+                    <span
+                      class="text-white text-[14px] bg-blue-950 mb-2 px-3 py-1 rounded-lg font-medium absolute top-2 left-1.5"
+                      >Nov</span
+                    >
+                    <img
+                      src="../image/produto-avanti-Mockup.png"
+                      alt="Produto 1"
+                      class="w-full h-40 object-cover mb-4" />
+                    <div class="text relative">
+                      <h3 class="text-lg font-semibold mb-2">Produto 1</h3>
+                      <p class="text-md line-through">R$ 100,00</p>
+                      <p class="text-lg font-bold">R$ 79,90</p>
+
+                      <span
+                        class="text-white text-[12px] bg-teal-400 px-2 py-1 rounded-lg font-medium absolute top-8 -right-2"
+                        >10% OFF</span
+                      >
+                      <p class="text-[14px] mb-2">
+                        Ou em até
+                        <strong class="font-medium">10x de R$7,90</strong>
+                      </p>
+                      <button
+                        class="bg-blue-700 text-white rounded-[10px] px-5 py-2.5 w-full">
+                        Comprar
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li class="glide__slide">
+                  <div
+                    class="card bg-white rounded-lg border-1 border-gray-300 shadow-md p-4 relative">
+                    <span
+                      class="text-white text-[14px] bg-blue-950 mb-2 px-3 py-1 rounded-lg font-medium absolute top-2 left-1.5"
+                      >Nov</span
+                    >
+                    <img
+                      src="../image/produto-avanti-Mockup.png"
+                      alt="Produto 1"
+                      class="w-full h-40 object-cover mb-4" />
+                    <div class="text relative">
+                      <h3 class="text-lg font-semibold mb-2">Produto 1</h3>
+                      <p class="text-md line-through">R$ 100,00</p>
+                      <p class="text-lg font-bold">R$ 79,90</p>
+
+                      <span
+                        class="text-white text-[12px] bg-teal-400 px-2 py-1 rounded-lg font-medium absolute top-8 -right-2"
+                        >10% OFF</span
+                      >
+                      <p class="text-[14px] mb-2">
+                        Ou em até
+                        <strong class="font-medium">10x de R$7,90</strong>
+                      </p>
+                      <button
+                        class="bg-blue-700 text-white rounded-[10px] px-5 py-2.5 w-full">
+                        Comprar
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li class="glide__slide">
+                  <div
+                    class="card bg-white rounded-lg border-1 border-gray-300 shadow-md p-4 relative">
+                    <span
+                      class="text-white text-[14px] bg-blue-950 mb-2 px-3 py-1 rounded-lg font-medium absolute top-2 left-1.5"
+                      >Nov</span
+                    >
+                    <img
+                      src="../image/produto-avanti-Mockup.png"
+                      alt="Produto 1"
+                      class="w-full h-40 object-cover mb-4" />
+                    <div class="text relative">
+                      <h3 class="text-lg font-semibold mb-2">Produto 1</h3>
+                      <p class="text-md line-through">R$ 100,00</p>
+                      <p class="text-lg font-bold">R$ 79,90</p>
+
+                      <span
+                        class="text-white text-[12px] bg-teal-400 px-2 py-1 rounded-lg font-medium absolute top-8 -right-2"
+                        >10% OFF</span
+                      >
+                      <p class="text-[14px] mb-2">
+                        Ou em até
+                        <strong class="font-medium">10x de R$7,90</strong>
+                      </p>
+                      <button
+                        class="bg-blue-700 text-white rounded-[10px] px-5 py-2.5 w-full">
+                        Comprar
+                      </button>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="glide__bullets mt-4" data-glide-el="controls[nav]">
+              <button class="glide__bullet" data-glide-dir="=0"></button>
+              <button class="glide__bullet" data-glide-dir="=1"></button>
+              <button class="glide__bullet" data-glide-dir="=2"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="about-us my-5">
+        <img class="w-full" src="..//image/image-mug.png" alt="mug image" />
+        <div class="text mt-5 p-3">
+          <h1 class="text-[36px] font-bold">Lorem Ipsum</h1>
+          <p class="my-5">
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+            pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+          </p>
+          <p>
+            Cras dignissim est et pellentesque tincidunt. Praesent bibendum quis
+            velit a aliquam. Ut vestibulum turpis eget mi iaculis ullamcorper.
+            Curabitur nec metus sed tortor sollicitudin porta nec eu enim. Ut
+            fermentum scelerisque tortor mollis volutpat. Mauris iaculis magna
+            nisl, vel porttitor augue placerat et.
+          </p>
+        </div>
+      </section>
+      <section class="bg-gray-500 p-5 mb-5">
+        <img class="w-full" src="../image/terceiro banner.png" alt="" />
+        <div class="itens">
+          <div class="item flex flex-row justify-center items-center p-3 gap-4">
+            <img src="../image/location-icon.png" alt="location icon" />
+            <p class="">
+              Aenean massa. Cum sociis natoque penatibus et magnis dis
+              parturient montes, nascetur ridiculus mus. Donec quam felis,
+              ultricies nec, pellentesque eu, pretium quis, sem.
+            </p>
+          </div>
+          <div class="item flex flex-row justify-center items-center p-5 gap-4">
+            <img src="../image/location-icon.png" alt="location icon" />
+            <p class="">
+              Aenean massa. Cum sociis natoque penatibus et magnis dis
+              parturient montes, nascetur ridiculus mus. Donec quam felis,
+              ultricies nec, pellentesque eu, pretium quis, sem.
+            </p>
+          </div>
+          <div class="item flex flex-row justify-center items-center p-5 gap-4">
+            <img src="../image/location-icon.png" alt="location icon" />
+            <p>
+              Aenean massa. Cum sociis natoque penatibus et magnis dis
+              parturient montes, nascetur ridiculus mus. Donec quam felis,
+              ultricies nec, pellentesque eu, pretium quis, sem.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="about-us">
+        <img class="w-full" src="..//image/image-mug.png" alt="mug image" />
+        <div class="text mt-5 p-3">
+          <h1 class="text-[36px] font-bold">Lorem Ipsum</h1>
+          <p class="my-5">
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+            pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+          </p>
+          <p>
+            Cras dignissim est et pellentesque tincidunt. Praesent bibendum quis
+            velit a aliquam. Ut vestibulum turpis eget mi iaculis ullamcorper.
+            Curabitur nec metus sed tortor sollicitudin porta nec eu enim. Ut
+            fermentum scelerisque tortor mollis volutpat. Mauris iaculis magna
+            nisl, vel porttitor augue placerat et.
+          </p>
+        </div>
+      </section>
+      <section class="contact-us">
+        <img class="w-full" src="../image/quarto banner.png" alt="office image" />
+        <p class="w-full contato text-center text-[16px] bg-blue-700 text-white p-3">
+          Entre em contato conosco e verifique a disponibilidade para sua
+          região!
+        </p>
+      </section>
+      <section >
+        <h1 class="font-bold text-center text-xl">Cadastre-se na nossa <strong class="text-blue-700">newsletter</strong></h1>
+        <form class="formulario p-5 bg-gray-300 m-5 rounded-[10px]" action="">
+          <div class="flex flex-col justify-center items-center p-5 gap-4">
+            <input
+              type="text"
+              id="name"
+              placeholder="Digite seu nome"
+              class="w-full h-10 rounded-md border-2 border-gray-300 focus:outline-none focus:border-blue-500 pl-2 bg-white" />
+          </div>
+          <div class="flex flex-col justify-center items-center p-5 gap-4">
+           
+            <input
+              type="email"
+              id="email"
+              placeholder="Digite seu e-mail"
+              class="w-full h-10 rounded-md border-2 border-gray-300 focus:outline-none focus:border-blue-500 pl-2 bg-white" />
+          </div>
+          <div class="flex flex-col justify-center items-center p-5 gap-4">
+            <label class="flex items-center">
+              <input
+                type="checkbox"
+                id="terms"
+                class="mr-2"
+                required />
+              <span class="text-sm text-gray-700">
+                Estou de acordo com a <a href="#" class=" underline">Política de Privacidade</a>.
+              </span>
+            </label>
+          </div>
+          <button
+            type="submit"
+            class="bg-blue-700 text-white rounded-[10px] px-5 py-2.5 w-full mb-5">
+            Enviar
+          </button>
+        </form>
+      </section>
+      <footer class="bg-gray-300">
+        <div class="icon">
+          <img src="../image/avanti-logo-footer.svg" alt="logo Avanti">
+          <div class="social-media">
+            <img src="../image/facebook.svg" alt="facebook icon" />
+            <img src="../image/instagram.svg" alt="instagram icon" />
+            <img src="../image/youtube-logo.svg" alt="youtube icon" />
+            <img src="../image/logo-tiktok.svg" alt="tiktok icon" />
+          </div>
+        </div>
+        <div class="mais-paginas">
+          <div class="">
+            <ul class="mais-opcoes">
+              <div class="mais-opcoes-item"> 
+                <li class=" font-bold"><a href="#">Institucional</a></li>
+                <img src="../image/arrow-icon.svg" alt="arrow icon">
+              </div>
+              <div class="mais-opcoes-item">
+                <li class=" font-bold"><a href="#">Central de ajuda</a></li>
+                <img src="../image/arrow-icon.svg" alt="arrow icon">
+              </div>
+              <div class="mais-opcoes-item">
+                <li class=" font-bold"><a href="#">Atendimento</a></li>
+                <img src="../image/arrow-icon.svg" alt="arrow icon">
+              </div>
+            </ul>
+          </div>
+        </div>
+        <div class="pagamentos">
+          <img src="../image/amex-logo.svg " alt="amex-logo" />
+          <img src="../image/master-icon.svg" alt="mastercard-logo" />
+          <img src="../image/visa-logo.svg" alt="visa-logo" />  
+          <img src="../image/hipercard-logo.svg" alt="hipercard-logo" />  
+          <img src="../image/elo-logo.svg" alt="elo-logo" />  
+          <img src="../image/b.svg" alt="logo-payment" />  
+          <img src="../image/paypal-logo.svg" alt="paypal-logo" />  
+          <img src="../image/icon-pix.svg" alt="icon-pix" />  
+          <img src="../image/icon-boleto.svg" alt="icon-boleto" />  
+          
+        </div>
+        <div class="text-center p-5">
+          <p class="text-sm text-gray-700">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci.
+          </p>
+          <div class="pagamentos">
+            <img src="../image/lets-icon.svg" alt="let's encrypt icon" />
+            <img src="../image/vtex-pci-logo.svg" alt="vtex-pci-logo" />
+            <img src="../image/avanti-tinny-logo.svg" alt="avanti-tinny-logo" />
+            <img src="../image/vtex-logo.svg" alt="vtex-logo" />
+          </div>
+      </footer>
+    </main>
+    <script src="../node_modules/@glidejs/glide/dist/glide.min.js"></script>
+
+    <script>
+      new Glide(".glide2", {
+        perView: 2,
+      }).mount();
+      new Glide(".glide", {
+        perView: 1,
+      }).mount();
+    </script>
+  </body>
+</html
