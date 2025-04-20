@@ -11,7 +11,7 @@
     <link
       rel="stylesheet"
       href="../node_modules/@glidejs/glide/dist/css/glide.theme.min.css" />
-
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
       rel="stylesheet" />
@@ -19,61 +19,726 @@
     <title>Avanti</title>
   </head>
   <body class=" nunito-sans">
-    <header class="sticky top-0 mb-2 bg-white z-10 md:w-full left-50%">
-      <p class="text-white bg-blue-700 text-center p-2 text-sm">
+    <header class="sticky top-0 mb-2 bg-white z-10 text-center left-50%">
+      <p class="text-white bg-blue-700 p-2 text-sm">
         Ganhe <strong class="bg-indigo-700 font-normal p-1">R$10,00</strong> de
         desconto no seu primeiro pedido. Utilize o cupom DESCONTO10
       </p>
-      <nav class="flex justify-between items-center bg-white md:px-80 w-full mx-auto p-3">
-        <img class="md:hidden" src="../image/menu-icon.svg" alt="menu" />
-        <img src="../image/logo-mobile.svg" alt="Logo Avanti" />
-        <div class="w-[500px] sm:hidden md:block search p-3 relative ">
-          <img
-            src="../image/search icon.svg"
-            alt="search-icon"
-            class="absolute right-5 mr-2 mt-3" />
-          <input
-            type="text"
-            placeholder="Digite aqui o que você procura?"
-            class="w-full h-10 rounded-md border-2 border-gray-300 focus:outline-none focus:border-blue-500 pl-3" />
+      <nav class="flex justify-around items-center bg-white  w-full  p-3">
+        <img class=" lg:hidden" src="../image/menu-icon.svg" alt="menu" />
+        <div class="flex justify-around items-center gap-5">
+          <img src="../image/logo-mobile.svg" alt="Logo Avanti" />
+          <div class="w-[500px] md:hidden lg:block search p-3 relative ">
+            <img
+              src="../image/search icon.svg"
+              alt="search-icon"
+              class="absolute right-5 mr-2 mt-3" />
+            <input
+              type="text"
+              placeholder="Digite aqui o que você procura?"
+              class="w-full h-10 rounded-md border-2 border-gray-300 focus:outline-none focus:border-blue-500 pl-3" />
+          </div>
         </div>
-        <div class="sm:hidden md:flex  justify-center items-center gap-5 ">
-          <img src="../image/profile-icon.svg" alt="profile icon" />
-          <p class="text-[14px]">Olá, <br> Nome Cliente</p>
-        </div>
-        <div class="cart relative">
-          <p
-            class="bg-blue-700 rounded-full text-center text-white absolute -top-2.5 -right-2 text-sm w-5">
-            2
-          </p>
-          <img src="../image/cart-icon.svg" alt="cart-icon" />
+        <div class="flex justify-center items-center gap-5 ">
+          <div class="hidden lg:flex  justify-center items-center gap-5 ">
+            <img src="../image/profile-icon.svg" alt="profile icon" />
+            <p class="text-[14px]">Olá, <br> Nome Cliente</p>
+          </div>
+          <div class="cart relative">
+            <p
+              class="bg-blue-700 rounded-full text-center text-white absolute -top-2.5 -right-2 text-sm w-5">
+              2
+            </p>
+            <img src="../image/cart-icon.svg" alt="cart-icon" />
+          </div>
         </div>
         
       </nav>
-      <div class="hidden md:block md:w-full left-50%">
-        <ul class="flex justify-center items-center gap-5">
-          <li class=" ">
-            <a class="flex justify-center items-center gap-2 font-bold hover:text-blue-700 p-2" href=""><img class="hover:fill-blue-700" src="../image/menu-desktop.svg" alt="menu icon">Todos os Departamentos</a>
-            <div class="absolute bg-white w-fit rounded-md shadow-lg mt-2  z-10  left-50%">
-              <a class="block hover:text-blue-700 hover:font-bold" href="">Departamento</a>
-              <a class="block hover:text-blue-700 hover:font-bold" href="">Departamento</a>
-              <a class="block hover:text-blue-700 hover:font-bold" href="">Departamento</a>
-              <a class="block hover:text-blue-700 hover:font-bold" href="">Departamento</a>
-              <a class="block hover:text-blue-700 hover:font-bold" href="">Departamento</a>
-              <a class="block hover:text-blue-700 hover:font-bold" href="">Departamento</a>
-              <a class="block hover:text-blue-700 hover:font-bold" href="">Departamento</a>
-              <a class="block hover:text-blue-700 hover:font-bold" href="">Departamento</a>
-              <a class="block hover:text-blue-700 hover:font-bold" href="">Departamento</a>
+      
+
+      <nav class=" bg-white border-gray-200 ">
+        <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
+            <div id="mega-menu-full-image" class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
+                <ul class="flex mt-4 font-medium md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse ">
+                    <li>
+                        <button id="mega-menu-full-cta-image-button" data-collapse-toggle="mega-menu-itens" class="flex items-center justify-between gap-2 relative w-full pt-2 px-3 text-gray-900 hover:text-blue-700 font-bold hover:fill-blue-700 focus:text-blue-700 focus:fill-blue-700">
+                          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 30 30" fill="currentColor">
+                            <path d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z"></path>
+                            </svg>
+                          Todos os departamentos 
+                        </button>
+                    </li>
+                    <div id="mega-menu-full-image-dropdown" class="mt-1 bg-white border-gray-200 absolute hidden right-5">
+                      <div class="grid max-w-screen-xl mt-5 px-4 py-5 mx-auto text-sm text-gray-500 dark:text-gray-400 md:grid-cols-3 md:px-6">
+                          <ul class="hidden mb-4 space-y-4 md:mb-0 md:block" aria-labelledby="mega-menu-full-image-button">
+                              <li>
+                                  <a href="#" class="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                                      Online Stores
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href="#" class="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                                      Segmentation
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href="#" class="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                                      Marketing CRM
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href="#" class="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                                      Online Stores
+                                  </a>
+                              </li>
+                          </ul>
+                          <ul class="mb-4 space-y-4 md:mb-0">
+                              <li>
+                                  <a href="#" class="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                                      Our Blog
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href="#" class="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                                      Terms & Conditions
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href="#" class="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                                      License
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href="#" class="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                                      Resources
+                                  </a>
+                              </li>
+                          </ul>
+                          <a href="#" class="p-8 bg-local bg-gray-500 bg-center bg-no-repeat bg-cover rounded-lg bg-blend-multiply hover:bg-blend-soft-light dark:hover:bg-blend-darken" style="background-image: url(/docs/images/dashboard-overview.png)">
+                              <p class="max-w-xl mb-5 font-extrabold leading-tight tracking-tight text-white">Preview the new Flowbite dashboard navigation.</p>
+                              <button type="button" class="inline-flex items-center px-2.5 py-1.5 text-xs font-medium text-center text-white border border-white rounded-lg hover:bg-white hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-700">
+                                  Get started
+                                  <svg class="w-3 h-3 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                                  </svg>
+                              </button>
+                          </a>
+                      </div>
+                    </div>
+                </ul>
             </div>
-          </li>
-          <li class="flex text-[14px] hover:text-blue-700 hover:font-bold p-2">Departamento</li>
-          <li class="flex text-[14px] hover:text-blue-700 hover:font-bold p-2">Departamento</li>
-          <li class="flex text-[14px] hover:text-blue-700 hover:font-bold p-2">Departamento</li>
-          <li class="flex text-[14px] hover:text-blue-700 hover:font-bold p-2">Departamento</li>
-          <li class="flex text-[14px] hover:text-blue-700 hover:font-bold p-2">Departamento</li>
-          <li class="flex text-[14px] hover:text-blue-700 hover:font-bold p-2">Departamento</li>
-        </ul>
-      </div>
+        </div>
+        <div id="mega-menu-itens" class=" bg-white shadow-md relative">
+            <div class="grid max-w-screen-xl px-4 pb-5 mx-auto text-sm text-gray-500  md:grid-cols-4 md:px-6">
+                <ul class="bg-gray-200 text-left p-2 flex flex-col gap-2 rounded-md font-bold">
+                  <li class="">  
+                    <button id="mega-menu-full-cta-image-button" data-collapse-toggle="mega-menu-full-image-dropdown" class="flex items-center justify-between gap-2 w-full text-gray-900 hover:text-blue-700 font-bold hover:fill-blue-700 focus:text-blue-700 focus:fill-blue-700">
+                      Departamento
+                      <svg class="" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10 16 4-4-4-4"/>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="">  
+                    <button id="mega-menu-full-cta-image-button" data-collapse-toggle="mega-menu-full-image-dropdown" class="flex items-center justify-between gap-2 w-full text-gray-900 hover:text-blue-700 font-bold hover:fill-blue-700 focus:text-blue-700 focus:fill-blue-700">
+                      Departamento
+                      <svg class="" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10 16 4-4-4-4"/>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="">  
+                    <button id="mega-menu-full-cta-image-button" data-collapse-toggle="mega-menu-full-image-dropdown" class="flex items-center justify-between gap-2 w-full text-gray-900 hover:text-blue-700 font-bold hover:fill-blue-700 focus:text-blue-700 focus:fill-blue-700">
+                      Departamento
+                      <svg class="" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10 16 4-4-4-4"/>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="">  
+                    <button id="mega-menu-full-cta-image-button" data-collapse-toggle="mega-menu-full-image-dropdown" class="flex items-center justify-between gap-2 w-full text-gray-900 hover:text-blue-700 font-bold hover:fill-blue-700 focus:text-blue-700 focus:fill-blue-700">
+                      Departamento
+                      <svg class="" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10 16 4-4-4-4"/>
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+                <div class="absolute right-[200px] bg-blue-700 w-40 h-40" id="mega-menu-full-image-dropdown">
+                  <h1 class="">To Aqui</h1>
+                </div>
+                
+            </div>
+        </div>
+        
+      </nav>
+
+      <!-- <ul class="hidden mb-4 space-y-4 md:mb-0 md:block" aria-labelledby="mega-menu-full-image-button">
+        <li>
+            <a href="#" class=" hover:text-blue-700 dark:hover:text-blue-500">
+                Online Stores
+            </a>
+        </li>
+        <li>
+            <a href="#" class=" hover:text-blue-700 dark:hover:text-blue-500">
+                Segmentation
+            </a>
+        </li>
+        <li>
+            <a href="#" class=" hover:text-blue-700 dark:hover:text-blue-500">
+                Marketing CRM
+            </a>
+        </li>
+        <li>
+            <a href="#" class=" hover:text-blue-700 dark:hover:text-blue-500">
+                Online Stores
+            </a>
+        </li>
+        <li>
+            <a href="#" class=" hover:text-blue-700 dark:hover:text-blue-500">
+                Online Stores
+            </a>
+        </li>
+        <li>
+            <a href="#" class=" hover:text-blue-700 dark:hover:text-blue-500">
+                Online Stores
+            </a>
+        </li>
+        <li>
+            <a href="#" class=" hover:text-blue-700 dark:hover:text-blue-500">
+                Online Stores
+            </a>
+        </li>
+    </ul>
+    <ul class="mb-4 space-y-4 md:mb-0">
+        <li>
+            <a href="#" class=" hover:text-blue-700">
+                Our Blog
+            </a>
+        </li>
+        <li>
+            <a href="#" class=" hover:text-blue-700">
+                Terms & Conditions
+            </a>
+        </li>
+        <li>
+            <a href="#" class=" hover:text-blue-700">
+                License
+            </a>
+        </li>
+        <li>
+            <a href="#" class=" hover:text-blue-700">
+                Resources
+            </a>
+        </li>
+        <li>
+            <a href="#" class=" hover:text-blue-700">
+                Resources
+            </a>
+        </li>
+        <li>
+            <a href="#" class=" hover:text-blue-700">
+                Resources
+            </a>
+        </li>
+        <li>
+            <a href="#" class=" hover:text-blue-700">
+                Resources
+            </a>
+        </li>
+    </ul>
+    <a href="#" class="p-8 bg-local bg-gray-500 bg-center bg-no-repeat bg-cover rounded-lg bg-blend-multiply hover:bg-blend-soft-light dark:hover:bg-blend-darken" style="background-image: url(/docs/images/dashboard-overview.png)">
+        <p class="max-w-xl mb-5 font-extrabold leading-tight tracking-tight text-white">Preview the new Flowbite dashboard navigation.</p>
+        <button type="button" class="inline-flex items-center px-2.5 py-1.5 text-xs font-medium text-center text-white border border-white rounded-lg hover:bg-white hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-700">
+            Get started
+            <svg class="w-3 h-3 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+            </svg>
+        </button>
+    </a> -->
+
+
+
+      <!-- <div class="hidden lg:block lg:w-full left-0 relative">
+        <div class="flex justify-center items-center gap-5">
+          
+        </div>
+          <ul class="flex justify-center items-center gap-5">
+            <li class=" group parent-group">
+              <a class=" flex justify-center items-center gap-2 font-bold hover:text-blue-700 p-2 " href="" >
+                <img class="hover:fill-current" src="../image/menu-desktop.svg" alt="menu icon">
+                Todos os departamentos
+              </a>
+              <ul class="absolute w-5xl max-h-[400px] flex flex-col gap-2 p-2 bg-gray-300 rounded-md mt-2 z-10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out left-50% top-[40px]">
+                <li class=" child-group text-left h-100%">
+                  <a href="#" class=" mega-btn block hover:text-blue-700 hover:font-bold">Departamento</a>
+                  <div class="mega-box w-100% h-100% flex justify-between gap-33  opacity-0 invisible child-menu absolute bg-white rounded-br-2xl rounded-tr-2xl shadow-lg top-0 left-[200px] transition-all duration-300 ease-in-out p-5">
+                    <ul class="flex flex-col gap-6.5">
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                    </ul>
+                    <ul class="flex flex-col gap-6.5">
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                    </ul>
+                    <ul class="flex flex-col gap-6.5">
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                    </ul>
+                    <ul class="">
+                      <li>
+                          <div class=" bg-[url('../image/image-mug-menu.png')] bg-fit bg-no-repeat bg-center h-[290px] w-[300px] flex flex-col justify-center items-center gap-3 rounded-md">
+                            <h2 class="text-white font-bold text-2xl flex justify-center items-center ">Confira os <br>
+                              Produtos <br>
+                              Que acabaram <br>
+                              De chegar.
+                            </h2>
+                            <button class="bg-transparent text-white border-white border-2 text-[14px] w-[100px] py-2 rounded-2xl">Ver todos</button>
+                          </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class=" child-group text-left h-100%">
+                  <a href="#" class=" mega-btn block hover:text-blue-700 hover:font-bold">Departamento</a>
+                  <div class="mega-box w-100% h-100% flex justify-between gap-33  opacity-0 invisible child-menu absolute bg-white rounded-br-2xl rounded-tr-2xl shadow-lg top-0 left-[200px] transition-all duration-300 ease-in-out p-5">
+                    <ul class="flex flex-col gap-6.5">
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                    </ul>
+                    <ul class="flex flex-col gap-6.5">
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                    </ul>
+                    <ul class="flex flex-col gap-6.5">
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                    </ul>
+                    <ul class="">
+                      <li>
+                          <div class=" bg-[url('../image/image-mug-menu.png')] bg-fit bg-no-repeat bg-center h-[290px] w-[300px] flex flex-col justify-center items-center gap-3 rounded-md">
+                            <h2 class="text-white font-bold text-2xl flex justify-center items-center ">Confira os <br>
+                              Produtos <br>
+                              Que acabaram <br>
+                              De chegar.
+                            </h2>
+                            <button class="bg-transparent text-white border-white border-2 text-[14px] w-[100px] py-2 rounded-2xl">Ver todos</button>
+                          </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class=" child-group text-left h-100%">
+                  <a href="#" class=" mega-btn block hover:text-blue-700 hover:font-bold">Departamento</a>
+                  <div class="mega-box w-100% h-100% flex justify-between gap-33 opacity-0 invisible child-menu absolute bg-white rounded-br-2xl rounded-tr-2xl shadow-lg transition-all duration-300 ease-in-out p-5 left-[200px] top-[40px]">
+                    <ul class="flex flex-col gap-6.5">
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                    </ul>
+                    <ul class="flex flex-col gap-6.5">
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                    </ul>
+                    <ul class="flex flex-col gap-6.5">
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                    </ul>
+                    <ul class="">
+                      <li>
+                          <div class=" bg-[url('../image/image-mug-menu.png')] bg-fit bg-no-repeat bg-center h-[290px] w-[300px] flex flex-col justify-center items-center gap-3 rounded-md">
+                            <h2 class="text-white font-bold text-2xl flex justify-center items-center ">Confira os <br>
+                              Produtos <br>
+                              Que acabaram <br>
+                              De chegar.
+                            </h2>
+                            <button class="bg-transparent text-white border-white border-2 text-[14px] w-[100px] py-2 rounded-2xl">Ver todos</button>
+                          </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class=" child-group text-left h-100%">
+                  <a href="#" class=" mega-btn block hover:text-blue-700 hover:font-bold">Departamento</a>
+                  <div class="mega-box w-100% h-100% flex justify-between gap-33  opacity-0 invisible child-menu absolute bg-white rounded-br-2xl rounded-tr-2xl shadow-lg top-0 left-[200px] transition-all duration-300 ease-in-out p-5">
+                    <ul class="flex flex-col gap-6.5">
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                    </ul>
+                    <ul class="flex flex-col gap-6.5">
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                    </ul>
+                    <ul class="flex flex-col gap-6.5">
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                    </ul>
+                    <ul class="">
+                      <li>
+                          <div class=" bg-[url('../image/image-mug-menu.png')] bg-fit bg-no-repeat bg-center h-[290px] w-[300px] flex flex-col justify-center items-center gap-3 rounded-md">
+                            <h2 class="text-white font-bold text-2xl flex justify-center items-center ">Confira os <br>
+                              Produtos <br>
+                              Que acabaram <br>
+                              De chegar.
+                            </h2>
+                            <button class="bg-transparent text-white border-white border-2 text-[14px] w-[100px] py-2 rounded-2xl">Ver todos</button>
+                          </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class=" child-group text-left h-100%">
+                  <a href="#" class=" mega-btn block hover:text-blue-700 hover:font-bold">Departamento</a>
+                  <div class="mega-box w-100% h-100% flex justify-between gap-33  opacity-0 invisible child-menu absolute bg-white rounded-br-2xl rounded-tr-2xl shadow-lg top-0 left-[200px] transition-all duration-300 ease-in-out p-5">
+                    <ul class="flex flex-col gap-6.5">
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                    </ul>
+                    <ul class="flex flex-col gap-6.5">
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                    </ul>
+                    <ul class="flex flex-col gap-6.5">
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                    </ul>
+                    <ul class="">
+                      <li>
+                          <div class=" bg-[url('../image/image-mug-menu.png')] bg-fit bg-no-repeat bg-center h-[290px] w-[300px] flex flex-col justify-center items-center gap-3 rounded-md">
+                            <h2 class="text-white font-bold text-2xl flex justify-center items-center ">Confira os <br>
+                              Produtos <br>
+                              Que acabaram <br>
+                              De chegar.
+                            </h2>
+                            <button class="bg-transparent text-white border-white border-2 text-[14px] w-[100px] py-2 rounded-2xl">Ver todos</button>
+                          </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class=" child-group text-left h-100%">
+                  <a href="#" class=" mega-btn block hover:text-blue-700 hover:font-bold">Departamento</a>
+                  <div class="mega-box w-100% h-100% flex justify-between gap-33  opacity-0 invisible child-menu absolute bg-white rounded-br-2xl rounded-tr-2xl shadow-lg top-0 left-[200px] transition-all duration-300 ease-in-out p-5">
+                    <ul class="flex flex-col gap-6.5">
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                    </ul>
+                    <ul class="flex flex-col gap-6.5">
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                    </ul>
+                    <ul class="flex flex-col gap-6.5">
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                    </ul>
+                    <ul class="">
+                      <li>
+                          <div class=" bg-[url('../image/image-mug-menu.png')] bg-fit bg-no-repeat bg-center h-[290px] w-[300px] flex flex-col justify-center items-center gap-3 rounded-md">
+                            <h2 class="text-white font-bold text-2xl flex justify-center items-center ">Confira os <br>
+                              Produtos <br>
+                              Que acabaram <br>
+                              De chegar.
+                            </h2>
+                            <button class="bg-transparent text-white border-white border-2 text-[14px] w-[100px] py-2 rounded-2xl">Ver todos</button>
+                          </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class=" child-group text-left h-100%">
+                  <a href="#" class=" mega-btn block hover:text-blue-700 hover:font-bold">Departamento</a>
+                  <div class="mega-box w-100% h-100% flex justify-between gap-33  opacity-0 invisible child-menu absolute bg-white rounded-br-2xl rounded-tr-2xl shadow-lg top-0 left-[200px] transition-all duration-300 ease-in-out p-5">
+                    <ul class="flex flex-col gap-6.5">
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                    </ul>
+                    <ul class="flex flex-col gap-6.5">
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                    </ul>
+                    <ul class="flex flex-col gap-6.5">
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                    </ul>
+                    <ul class="">
+                      <li>
+                          <div class=" bg-[url('../image/image-mug-menu.png')] bg-fit bg-no-repeat bg-center h-[290px] w-[300px] flex flex-col justify-center items-center gap-3 rounded-md">
+                            <h2 class="text-white font-bold text-2xl flex justify-center items-center ">Confira os <br>
+                              Produtos <br>
+                              Que acabaram <br>
+                              De chegar.
+                            </h2>
+                            <button class="bg-transparent text-white border-white border-2 text-[14px] w-[100px] py-2 rounded-2xl">Ver todos</button>
+                          </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class=" child-group text-left h-100%">
+                  <a href="#" class=" mega-btn block hover:text-blue-700 hover:font-bold">Departamento</a>
+                  <div class="mega-box w-100% h-100% flex justify-between gap-33  opacity-0 invisible child-menu absolute bg-white rounded-br-2xl rounded-tr-2xl shadow-lg top-0 left-[200px] transition-all duration-300 ease-in-out p-5">
+                    <ul class="flex flex-col gap-6.5">
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                    </ul>
+                    <ul class="flex flex-col gap-6.5">
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                    </ul>
+                    <ul class="flex flex-col gap-6.5">
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                    </ul>
+                    <ul class="">
+                      <li>
+                          <div class=" bg-[url('../image/image-mug-menu.png')] bg-fit bg-no-repeat bg-center h-[290px] w-[300px] flex flex-col justify-center items-center gap-3 rounded-md">
+                            <h2 class="text-white font-bold text-2xl flex justify-center items-center ">Confira os <br>
+                              Produtos <br>
+                              Que acabaram <br>
+                              De chegar.
+                            </h2>
+                            <button class="bg-transparent text-white border-white border-2 text-[14px] w-[100px] py-2 rounded-2xl">Ver todos</button>
+                          </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class=" child-group text-left h-100%">
+                  <a href="#" class=" mega-btn block hover:text-blue-700 hover:font-bold">Departamento</a>
+                  <div class="mega-box w-100% h-100% flex justify-between gap-33  opacity-0 invisible child-menu absolute bg-white rounded-br-2xl rounded-tr-2xl shadow-lg top-0 left-[200px] transition-all duration-300 ease-in-out p-5">
+                    <ul class="flex flex-col gap-6.5">
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                    </ul>
+                    <ul class="flex flex-col gap-6.5">
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                    </ul>
+                    <ul class="flex flex-col gap-6.5">
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                    </ul>
+                    <ul class="">
+                      <li>
+                          <div class=" bg-[url('../image/image-mug-menu.png')] bg-fit bg-no-repeat bg-center h-[290px] w-[300px] flex flex-col justify-center items-center gap-3 rounded-md">
+                            <h2 class="text-white font-bold text-2xl flex justify-center items-center ">Confira os <br>
+                              Produtos <br>
+                              Que acabaram <br>
+                              De chegar.
+                            </h2>
+                            <button class="bg-transparent text-white border-white border-2 text-[14px] w-[100px] py-2 rounded-2xl">Ver todos</button>
+                          </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class=" child-group text-left h-100%">
+                  <a href="#" class=" mega-btn block hover:text-blue-700 hover:font-bold">Departamento</a>
+                  <div class="mega-box w-100% h-100% flex justify-between gap-33  opacity-0 invisible child-menu absolute bg-white rounded-br-2xl rounded-tr-2xl shadow-lg top-0 left-[200px] transition-all duration-300 ease-in-out p-5">
+                    <ul class="flex flex-col gap-6.5">
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                    </ul>
+                    <ul class="flex flex-col gap-6.5">
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                    </ul>
+                    <ul class="flex flex-col gap-6.5">
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                    </ul>
+                    <ul class="">
+                      <li>
+                          <div class=" bg-[url('../image/image-mug-menu.png')] bg-fit bg-no-repeat bg-center h-[290px] w-[300px] flex flex-col justify-center items-center gap-3 rounded-md">
+                            <h2 class="text-white font-bold text-2xl flex justify-center items-center ">Confira os <br>
+                              Produtos <br>
+                              Que acabaram <br>
+                              De chegar.
+                            </h2>
+                            <button class="bg-transparent text-white border-white border-2 text-[14px] w-[100px] py-2 rounded-2xl">Ver todos</button>
+                          </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+          
+          
+              </ul>
+            </li>
+            <li class=" group parent-group" data-department="1">
+              <a class="flex items-center gap-2 hover:font-bold hover:text-blue-700 p-2" href="#">
+                Departamento 1
+              </a>
+              <ul class="absolute w-5xl max-h-[400px] flex flex-col gap-2 p-2 top-[10px] left-2 bg-gray-300  rounded-md  mt-2  z-11 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out">
+                <li class=" child-group text-left h-100%">
+                  <a href="#" class=" mega-btn block hover:text-blue-700 hover:font-bold">Departamento</a>
+                  <div class="mega-box w-100% h-100% flex justify-between gap-33 opacity-0 invisible child-menu absolute bg-white rounded-br-2xl rounded-tr-2xl shadow-lg transition-all duration-300 ease-in-out p-5 left-[200px] top-[40px]">
+                    <ul class="flex flex-col gap-6.5">
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                    </ul>
+                    <ul class="flex flex-col gap-6.5">
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                    </ul>
+                    <ul class="flex flex-col gap-6.5">
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                      <li class="text-[14px] hover:text-blue-700 hover:font-bold"><a href="#">Categoria</a></li>
+                    </ul>
+                    <ul class="">
+                      <li>
+                          <div class=" bg-[url('../image/image-mug-menu.png')] bg-fit bg-no-repeat bg-center h-[290px] w-[300px] flex flex-col justify-center items-center gap-3 rounded-md">
+                            <h2 class="text-white font-bold text-2xl flex justify-center items-center ">Confira os <br>
+                              Produtos <br>
+                              Que acabaram <br>
+                              De chegar.
+                            </h2>
+                            <button class="bg-transparent text-white border-white border-2 text-[14px] w-[100px] py-2 rounded-2xl">Ver todos</button>
+                          </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="flex text-[14px] hover:text-blue-700 hover:font-bold p-2">Departamento</li>
+            <li class="flex text-[14px] hover:text-blue-700 hover:font-bold p-2">Departamento</li>
+            <li class="flex text-[14px] hover:text-blue-700 hover:font-bold p-2">Departamento</li>
+            <li class="flex text-[14px] hover:text-blue-700 hover:font-bold p-2">Departamento</li>
+            <li class="flex text-[14px] hover:text-blue-700 hover:font-bold p-2">Departamento</li>
+          </ul>
+      </div> -->
       <div class="md:hidden search p-3">
         <img
           src="../image/search icon.svg"
@@ -91,16 +756,13 @@
         <div class="glide__track" data-glide-el="track">
           <ul class="glide__slides">
             <li class="glide__slide">
-              <img class="w-full max-h-max md:hidden" src="../image/banner.png" alt="banner art" />
-              <img class="sm:hidden min-h-96 md:block max-w-96 max-h-max" src="../image//banner-desktop.png" alt="banner art">
+              <img class="  md:flex  max-h-max" src="../image//banner-desktop.png" alt="banner art">
             </li>
             <li class="glide__slide">
-              <img class="w-full max-h-max md:hidden" src="../image/banner.png" alt="banner art" />
-              <img class="sm:hidden min-h-96 md:block max-w-96 max-h-max" src="../image//banner-desktop.png" alt="banner art">
+              <img class="  md:block  max-h-max" src="../image//banner-desktop.png" alt="banner art">
             </li>
             <li class="glide__slide">
-              <img class="w-full max-h-max md:hidden" src="../image/banner.png" alt="banner art" />
-              <img class="sm:hidden min-h-96 md:block max-w-96 max-h-max" src="../image//banner-desktop.png" alt="banner art">
+              <img class="  md:block  max-h-max" src="../image//banner-desktop.png" alt="banner art">
             </li>
           </ul>
         </div>
@@ -243,7 +905,7 @@
         </div>
       </section>
       <section class="bg-gray-500 p-5 mb-5">
-        <img class="w-full" src="../image/terceiro banner.png" alt="" />
+        <img class="w-full" src="../image/terceiro-banner.png" alt="" />
         <div class="itens">
           <div class="item flex flex-row justify-center items-center p-3 gap-4">
             <img src="../image/location-icon.png" alt="location icon" />
@@ -386,6 +1048,7 @@
       </footer>
     </main>
     <script src="../node_modules/@glidejs/glide/dist/glide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 
     <script>
       new Glide(".glide2", {
@@ -395,5 +1058,6 @@
         perView: 1,
       }).mount();
     </script>
+    <script src="script.js"></script>
   </body>
 </html
