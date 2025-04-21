@@ -21,3 +21,32 @@ maisOpcoesItem.forEach((item) => {
     }
   });
 });
+
+// Função para search bar
+// Seleciona os elementos da barra de pesquisa
+const searchInput = document.querySelector(".searchInput");
+const searchButton = document.querySelector(".searchButton");
+const searchResult = document.getElementById("searchResult");
+
+// Função para exibir o resultado da pesquisa
+function handleSearch() {
+  const query = searchInput.value.trim();
+
+  if (query === "") {
+    searchResult.textContent = "Por favor, digite algo para buscar.";
+    searchResult.classList.remove("hidden", "bg-green-200");
+    searchResult.classList.add("bg-red-100");
+  } else {
+    searchResult.textContent = `Você buscou por: "${query}"`;
+    searchResult.classList.remove("hidden", "bg-red-100", "text-red-700");
+    searchResult.classList.add("bg-green-200");
+  }
+}
+
+searchButton.addEventListener("click", handleSearch);
+
+searchInput.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    handleSearch();
+  }
+});

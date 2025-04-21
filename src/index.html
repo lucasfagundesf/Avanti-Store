@@ -31,13 +31,15 @@
           <img src="../image/logo-mobile.svg" alt="Logo Avanti" />
           <div class="hidden w-[500px] lg:block search p-3 relative ">
             <img
+              id="searchButton"
               src="../image/search icon.svg"
               alt="search-icon"
-              class="absolute right-5 mr-2 mt-3" />
+              class="absolute right-5 mr-2 mt-3 search-button" />
             <input
               type="text"
+              id="searchInput"
               placeholder="Digite aqui o que você procura?"
-              class="w-full h-10 rounded-md border-2 border-gray-300 focus:outline-none focus:border-blue-500 pl-3" />
+              class=" search-bar w-full h-10 rounded-md border-2 border-gray-300 focus:outline-none focus:border-blue-500 pl-3" />
           </div>
         </div>
         <div class="flex justify-center items-center gap-5 ">
@@ -362,19 +364,25 @@
         </div>
       </nav>
 
-      <div class="md:hidden search p-3">
+      <div class="block lg:hidden search p-3">
         <img
+          id="searchButton"
           src="../image/search icon.svg"
           alt="search-icon"
-          class="absolute right-5 mr-2 mt-3" />
+          class="absolute right-5 mr-2 mt-3 searchButton" 
+        />
         <input
           type="text"
+          id="searchInput"
           placeholder="Digite aqui o que você procura?"
-          class="w-full h-10 rounded-md border-2 border-gray-300 focus:outline-none focus:border-blue-500 pl-3" />
+          class="searchInput w-full h-10 rounded-md border-2 border-gray-300 focus:outline-none focus:border-blue-500 pr-9" />
       </div>
     </header>
     <main
-      class="  md:mx-auto max-w-screen-xl m-auto bg-white ">
+      class="  md:mx-auto max-w-screen-xl m-auto bg-white relative">
+      <div id="searchResult" class="search-result hidden bg-red-100 p-2 mt-3 rounded-md font-medium text-center ">
+
+      </div>
       <div class="glide">
         <div class="glide__track" data-glide-el="track">
           <ul class="glide__slides">
